@@ -18,7 +18,7 @@
 
 Summary:    A Foreman plugin for Docker container management
 Name:       %{?scl_prefix}rubygem-%{gem_name}
-Version: 1.4.0
+Version: '1.4.0
 Release:    1.fm1_10%{?dist}
 Group:      Applications/System
 License:    GPLv3
@@ -118,6 +118,9 @@ cp -a .%{gem_dir}/* \
 exit 0
 
 %changelog
+* Fri Jul 24 2015 Daniel Lobato Garcia <elobatocs@gmail.com> '1.4.0-1.fm1_10
+- plugins:foreman_docker - Release '1.4.0 (elobatocs@gmail.com)
+
 * Fri Jul 24 2015 Daniel Lobato Garcia <elobatocs@gmail.com> 1.4.0-1.fm1_10
 - plugins:foreman_docker - Release 1.4.0 (elobatocs@gmail.com)
 

@@ -121,6 +121,9 @@ exit 0
 * Fri Jul 24 2015 Daniel Lobato Garcia <elobatocs@gmail.com> 1.4.0-1.fm1_10
 - plugins:foreman_docker - Release 1.4.0 (elobatocs@gmail.com)
 
+* Fri Jul 24 2015 Daniel Lobato Garcia <elobatocs@gmail.com> 1.4.0-1.fm1_10
+- plugins:foreman_docker - Release 1.4.0 (elobatocs@gmail.com)
+
 * Fri Jul 24 2015 Dominic Cleal <dcleal@redhat.com> 1.4.0-1.fm1_10
 - Update foreman_docker to 1.4.0 (dcleal@redhat.com)
 

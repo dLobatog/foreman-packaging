@@ -1,3 +1,7 @@
+ruby-foreman-docker ('1.4.0-1) stable; urgency=low
+
+  * Update release to '1.4.0
+ -- Daniel Lobato Garcia <elobatocs@gmail.com> Fri, Jul 24 2015 17:53:24 -0400
 ruby-foreman-docker (1.4.0-1) stable; urgency=low
 
   * Update release to 1.4.0

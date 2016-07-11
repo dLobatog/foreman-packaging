@@ -185,6 +185,7 @@ whitelist = foreman
   rubygem-unf_ext
   rubygem-unicode-display_width
   rubygem-validates_lengths_from_database
+  rubygem-webpack-rails
   rubygem-will_paginate
   rubygem-wirb
   tfm
@@ -305,6 +306,7 @@ whitelist = foreman
   rubygem-unf_ext
   rubygem-unicode-display_width
   rubygem-validates_lengths_from_database
+  rubygem-webpack-rails
   rubygem-will_paginate
   rubygem-wirb
   tfm
@@ -382,6 +384,7 @@ whitelist = foreman
   rubygem-therubyracer
   rubygem-underscore-rails
   rubygem-validates_lengths_from_database
+  rubygem-webpack-rails
 
 [foreman-plugins-nightly-rhel6]
 disttag = .el6

@@ -24,7 +24,7 @@ Summary:Systems Management web application
 Group:  Applications/System
 License: GPLv3+ with exceptions
 URL: http://theforeman.org
-Source0: http://downloads.theforeman.org/%{name}/%{name}-%{version}%{?dashalphatag}.tar.bz2
+Source0: /home/daniel/workspace/webpack-foreman/pkg/foreman-1.13.0.tar.bz2
 Source1: %{name}.init
 Source2: %{name}.sysconfig
 Source3: %{name}.logrotate

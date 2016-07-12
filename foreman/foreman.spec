@@ -24,7 +24,7 @@ Summary:Systems Management web application
 Group:  Applications/System
 License: GPLv3+ with exceptions
 URL: http://theforeman.org
-Source0: /home/daniel/workspace/webpack-foreman/pkg/foreman-1.13.0.tar.bz2
+Source0: http://localhost:8000/foreman-1.13.0.tar.bz2
 Source1: %{name}.init
 Source2: %{name}.sysconfig
 Source3: %{name}.logrotate
@@ -115,6 +115,8 @@ Requires: %{?scl_prefix}rubygem(responders) >= 2.0
 Requires: %{?scl_prefix}rubygem(responders) < 3
 Requires: %{?scl_prefix}rubygem(roadie-rails) >= 1.1
 Requires: %{?scl_prefix}rubygem(roadie-rails) < 2
+Requires: %{?scl_prefix}rubygem(webpack-rails) >= 0.9.7
+Requires: %{?scl_prefix}rubygem(webpack-rails) < 0.10.0
 # facter
 %if 0%{?scl:1}
 Requires: %{?scl_prefix}rubygem(facter)
@@ -193,7 +195,7 @@ BuildRequires: %{?scl_prefix}rubygem(responders) < 3
 BuildRequires: %{?scl_prefix}rubygem(roadie-rails) >= 1.1
 BuildRequires: %{?scl_prefix}rubygem(roadie-rails) < 2
 BuildRequires: %{?scl_prefix}rubygem(webpack-rails) >= 0.9.7
-BuildRequires: %{?scl_prefix}rubygem(webpack-rails) < 1
+BuildRequires: %{?scl_prefix}rubygem(webpack-rails) < 1.0.0
 # assets
 %if 0%{?scl:1}
 BuildRequires: %{scl}-runtime-assets >= 3
@@ -211,8 +213,6 @@ BuildRequires: npm(lodash) >= 2.4.1
 BuildRequires: npm(lodash) < 2.5.0
 BuildRequires: npm(select2) >= 3.5.2
 BuildRequires: npm(select2) < 3.6.0
-BuildRequires: %{?scl_prefix}rubygem(webpack-rails) >= 0.9.7
-BuildRequires: %{?scl_prefix}rubygem(webpack-rails) < 1.0.0
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) >= 4.0.0
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) < 4.1.0
 BuildRequires: %{?scl_prefix_ror}rubygem(sass-rails) >= 5

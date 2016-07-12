@@ -199,6 +199,20 @@ BuildRequires: %{?scl_prefix}rubygem(webpack-rails) < 1
 BuildRequires: %{scl}-runtime-assets >= 3
 BuildRequires: %{scl}-runtime-assets < 4
 %endif
+BuildRequires: npm(jquery) >= 1.11.0
+BuildRequires: npm(jquery) < 1.12.0
+BuildRequires: npm(jquery-ujs) >= 1.2.0
+BuildRequires: npm(jquery-ujs) < 1.3.0
+BuildRequires: npm(jquery.cookie) >= 1.4.1
+BuildRequires: npm(jquery.cookie) < 1.5.0
+BuildRequires: npm(jstz) >= 1.0.7
+BuildRequires: npm(jstz) < 1.1.0
+BuildRequires: npm(lodash) >= 2.4.1
+BuildRequires: npm(lodash) < 2.5.0
+BuildRequires: npm(select2) >= 3.5.2
+BuildRequires: npm(select2) < 3.6.0
+BuildRequires: %{?scl_prefix}rubygem(webpack-rails) >= 0.9.7
+BuildRequires: %{?scl_prefix}rubygem(webpack-rails) < 1.0.0
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) >= 4.0.0
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) < 4.1.0
 BuildRequires: %{?scl_prefix_ror}rubygem(sass-rails) >= 5
@@ -402,6 +416,18 @@ Requires: %{name} = %{version}-%{release}
 Requires: %{scl}-runtime-assets >= 3
 Requires: %{scl}-runtime-assets < 4
 %endif
+Requires: npm(jquery) >= 1.11.0
+Requires: npm(jquery) < 1.12.0
+Requires: npm(jquery-ujs) >= 1.2.0
+Requires: npm(jquery-ujs) < 1.3.0
+Requires: npm(jquery.cookie) >= 1.4.1
+Requires: npm(jquery.cookie) < 1.5.0
+Requires: npm(jstz) >= 1.0.7
+Requires: npm(jstz) < 1.1.0
+Requires: npm(lodash) >= 2.4.1
+Requires: npm(lodash) < 2.5.0
+Requires: npm(select2) >= 3.5.2
+Requires: npm(select2) < 3.6.0
 Requires: %{?scl_prefix}rubygem(ace-rails-ap) >= 4.0.0
 Requires: %{?scl_prefix}rubygem(ace-rails-ap) < 4.1.0
 Requires: %{?scl_prefix_ror}rubygem(sass-rails) >= 5

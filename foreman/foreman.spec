@@ -129,6 +129,7 @@ Requires: %{?scl_prefix}rubygem(rack-jsonp)
 # Build dependencies
 BuildRequires: gettext
 BuildRequires: asciidoc
+BuildRequires: npm
 BuildRequires: %{scl_ruby_bin}
 BuildRequires: %{?scl_prefix_ruby}rubygems
 BuildRequires: %{?scl_prefix_ruby}rubygem(rake) >= 0.8.3
@@ -585,6 +586,7 @@ sed -i 's/:locations_enabled: false/:locations_enabled: true/' config/settings.y
 sed -i 's/:organizations_enabled: false/:organizations_enabled: true/' config/settings.yaml
 export BUNDLER_EXT_NOSTRICT=1
 export BUNDLER_EXT_GROUPS="default assets"
+npm install webpack --verbose
 %{scl_rake} assets:precompile RAILS_ENV=production --trace
 %{scl_rake} webpack:compile --trace
 %{scl_rake} db:migrate RAILS_ENV=production --trace

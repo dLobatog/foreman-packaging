@@ -129,7 +129,6 @@ Requires: %{?scl_prefix}rubygem(rack-jsonp)
 # Build dependencies
 BuildRequires: gettext
 BuildRequires: asciidoc
-BuildRequires: npm
 BuildRequires: %{scl_ruby_bin}
 BuildRequires: %{?scl_prefix_ruby}rubygems
 BuildRequires: %{?scl_prefix_ruby}rubygem(rake) >= 0.8.3
@@ -214,6 +213,11 @@ BuildRequires: npm(lodash) >= 2.4.1
 BuildRequires: npm(lodash) < 2.5.0
 BuildRequires: npm(select2) >= 3.5.2
 BuildRequires: npm(select2) < 3.6.0
+BuildRequires: npm(webpack) >= 1.9.11
+BuildRequires: npm(webpack) < 2.0.0
+BuildRequires: libuv-devel
+BuildRequires: libuv-static
+BuildRequires: libuv
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) >= 4.0.0
 BuildRequires: %{?scl_prefix}rubygem(ace-rails-ap) < 4.1.0
 BuildRequires: %{?scl_prefix_ror}rubygem(sass-rails) >= 5
@@ -586,15 +590,13 @@ sed -i 's/:locations_enabled: false/:locations_enabled: true/' config/settings.y
 sed -i 's/:organizations_enabled: false/:organizations_enabled: true/' config/settings.yaml
 export BUNDLER_EXT_NOSTRICT=1
 export BUNDLER_EXT_GROUPS="default assets"
-npm install webpack --verbose
 %{scl_rake} assets:precompile RAILS_ENV=production --trace
-%{scl_rake} webpack:compile --trace
+NODE_ENV=production webpack --bail --config config/webpack.config.js
 %{scl_rake} db:migrate RAILS_ENV=production --trace
 %{scl_rake} apipie:cache RAILS_ENV=production cache_part=resources --trace
 rm config/database.yml config/settings.yaml
 
 %install
-rm -rf %{buildroot}
 
 #install man pages
 %{scl_rake} -f Rakefile.dist install \

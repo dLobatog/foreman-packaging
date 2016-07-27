@@ -40,11 +40,8 @@
       <packagereq type="default">centos-release-scl</packagereq>
       <packagereq type="default">centos-release-scl-rh</packagereq>
 
-      <packagereq type="default">nodejs-bundle-webpack</packagereq>
-
       <packagereq type="default">tfm-mod_passenger</packagereq>
 
-      <packagereq type="default">nodejs-jquery.cookie</packagereq>
 
       <packagereq type="default">tfm-rubygem-ace-rails-ap</packagereq>
       <packagereq type="default">tfm-rubygem-activerecord-session_store</packagereq>
@@ -181,6 +178,9 @@
       <packagereq type="default">nodejs-lodash</packagereq>
       <packagereq type="default">nodejs-jstz</packagereq>
       <packagereq type="default">nodejs-jquery-ujs</packagereq>
+      <packagereq type="default">nodejs-bundle-webpack</packagereq>
+      <packagereq type="default">nodejs-stats-webpack-plugin</packagereq>
+      <packagereq type="default">nodejs-jquery.cookie</packagereq>
 
       <packagereq type="default">puppet-agent-oauth</packagereq>
       <packagereq type="default">rubygem-apipie-bindings</packagereq>

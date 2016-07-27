@@ -42,7 +42,6 @@
 
       <packagereq type="default">tfm-mod_passenger</packagereq>
 
-
       <packagereq type="default">tfm-rubygem-ace-rails-ap</packagereq>
       <packagereq type="default">tfm-rubygem-activerecord-session_store</packagereq>
       <packagereq type="default">tfm-rubygem-addressable</packagereq>
@@ -174,6 +173,7 @@
       <packagereq type="default">mod_passenger</packagereq>
 
       <packagereq type="default">nodejs-bundle-babel-core</packagereq>
+      <packagereq type="default">nodejs-bundle-babel-loader</packagereq>
       <packagereq type="default">nodejs-select2</packagereq>
       <packagereq type="default">nodejs-lodash</packagereq>
       <packagereq type="default">nodejs-jstz</packagereq>

@@ -25,6 +25,7 @@ whitelist = foreman-installer
   nodejs-jstz
   nodejs-jquery.cookie
   nodejs-jquery-ujs
+  nodejs-bundle-webpack
   puppet-agent-oauth
   rubygem-apipie-bindings
   rubygem-bundler_ext
@@ -178,6 +179,7 @@ whitelist = foreman
   foreman-proxy
   foreman-selinux
   nodejs-bundle-babel-core
+  nodejs-bundle-webpack
   nodejs-select2
   nodejs-lodash
   nodejs-jstz

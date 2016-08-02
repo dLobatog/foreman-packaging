@@ -33,6 +33,7 @@
       <packagereq type="default">foreman-installer</packagereq>
       <packagereq type="default">rubygem-puppet-strings</packagereq>
 
+      <packagereq type="default">nodejs-jquery</packagereq>
       <packagereq type="default">nodejs-bundle-babel-core</packagereq>
       <packagereq type="default">nodejs-select2</packagereq>
       <packagereq type="default">nodejs-lodash</packagereq>

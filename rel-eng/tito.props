@@ -30,6 +30,7 @@ whitelist = foreman-installer
   nodejs-bundle-babel-loader
   nodejs-bundle-babel-preset-es2015
   nodejs-expose-loader
+  nodejs-jquery
   puppet-agent-oauth
   rubygem-apipie-bindings
   rubygem-bundler_ext
@@ -193,6 +194,7 @@ whitelist = foreman
   nodejs-bundle-babel-loader
   nodejs-bundle-babel-preset-es2015
   nodejs-expose-loader
+  nodejs-jquery
   puppet-agent-oauth
   rubygem-ace-rails-ap
   rubygem-activerecord-session_store

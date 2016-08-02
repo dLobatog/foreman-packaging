@@ -241,7 +241,6 @@ mkdir -p %{buildroot}%{_bindir}/
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
 
 %doc
 

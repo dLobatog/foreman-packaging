@@ -48,7 +48,6 @@ mkdir -p %{buildroot}%{_bindir}
 %files
 %{nodejs_sitelib}/%{npm_name}
 %exclude %{nodejs_sitelib}/%{npm_name}/README.md
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
 %exclude %{nodejs_sitelib}/%{npm_name}/gulpfile.js
 %exclude %{nodejs_sitelib}/%{npm_name}/test.js
 %doc LICENCE

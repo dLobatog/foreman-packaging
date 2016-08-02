@@ -44,7 +44,6 @@ cp -pfr README.md index.js package.json %{buildroot}%{nodejs_sitelib}/%{npm_name
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
 
 %files doc
 %doc README.md

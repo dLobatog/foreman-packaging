@@ -44,7 +44,6 @@ cp -pfr LICENSE README.md index.js package.json %{buildroot}%{nodejs_sitelib}/%{
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
 %doc LICENSE
 
 %files doc

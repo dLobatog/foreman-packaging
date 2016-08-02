@@ -41,7 +41,6 @@ cp -pfr script src test MIT-LICENSE *.json *.md %{buildroot}%{nodejs_sitelib}/%{
 %files
 %{nodejs_sitelib}/%{npm_name}
 %exclude %{nodejs_sitelib}/%{npm_name}/script
-%exclude %{nodejs_sitelib}/%{npm_name}/*.json
 %exclude %{nodejs_sitelib}/%{npm_name}/*.md
 %exclude %{nodejs_sitelib}/%{npm_name}/.*
 %doc %{nodejs_sitelib}/%{npm_name}/MIT-LICENSE

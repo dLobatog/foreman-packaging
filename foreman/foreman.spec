@@ -595,11 +595,6 @@ sed -i 's/:organizations_enabled: false/:organizations_enabled: true/' config/se
 export BUNDLER_EXT_NOSTRICT=1
 export BUNDLER_EXT_GROUPS="default assets"
 mkdir node_modules
-#ln -s /usr/lib/node_modules/bundle-webpack node_modules/webpack
-#ln -s /usr/lib/node_modules/bundle-babel-loader node_modules/babel-loader
-#ln -s /usr/lib/node_modules/bundle-babel-core node_modules/babel-core
-#ln -s /usr/lib/node_modules/bundle-babel-preset-es2015 node_modules/babel-preset-es2015
-#ln -s /usr/lib/node_modules/* node_modules/
 cp -r /usr/lib/node_modules .
 mv node_modules/bundle-webpack node_modules/webpack
 mv node_modules/bundle-babel-loader node_modules/babel-loader

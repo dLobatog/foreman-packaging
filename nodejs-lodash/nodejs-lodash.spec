@@ -44,7 +44,6 @@ cp -pfr dist  *.json *.md *.js *.txt %{buildroot}%{nodejs_sitelib}/%{npm_name}
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
 %doc LICENSE.txt
 
 %files doc

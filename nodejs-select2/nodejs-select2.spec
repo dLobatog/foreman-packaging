@@ -45,11 +45,6 @@ cp -pfr *.png *.css *.json *.md *.js %{buildroot}%{nodejs_sitelib}/%{npm_name}
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%exclude %{nodejs_sitelib}/%{npm_name}/package.json
-%exclude %{nodejs_sitelib}/%{npm_name}/composer.json
-%exclude %{nodejs_sitelib}/%{npm_name}/component.json
-%exclude %{nodejs_sitelib}/%{npm_name}/bower.json
-%exclude %{nodejs_sitelib}/%{npm_name}/select2.jquery.json
 %doc LICENSE
 
 %files doc

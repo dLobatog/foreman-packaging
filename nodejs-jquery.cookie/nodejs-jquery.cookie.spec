@@ -46,7 +46,6 @@ cp -pfr test  *.json *.md *.js *.txt %{buildroot}%{nodejs_sitelib}/%{npm_name}
 %files
 %{nodejs_sitelib}/%{npm_name}
 %exclude %{nodejs_sitelib}/%{npm_name}/Gruntfile.js
-%exclude %{nodejs_sitelib}/%{npm_name}/*.json
 %exclude %{nodejs_sitelib}/%{npm_name}/*.md
 %doc %{nodejs_sitelib}/%{npm_name}/MIT-LICENSE.txt
 

@@ -1,3 +1,9 @@
+foreman (1.16.0-1) stable; urgency=low
+
+  * Bump changelog to 1.16.0 to match VERSION
+
+ -- Daniel Lobato Garcia <me@daniellobato.me>  Thu, 30 Mar 2017 10:56:40 +0200
+
 foreman (1.14.2-1) stable; urgency=low
 
   * 1.14.2 released

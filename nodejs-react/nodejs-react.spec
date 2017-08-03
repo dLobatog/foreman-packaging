@@ -10,28 +10,27 @@ License: BSD
 URL: https://facebook.github.io/react/
 Source0: http://registry.npmjs.org/react/-/react-15.3.2.tgz
 Source1: http://registry.npmjs.org/loose-envify/-/loose-envify-1.3.1.tgz
-Source2: http://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz
-Source3: http://registry.npmjs.org/fbjs/-/fbjs-0.8.14.tgz
-Source4: http://registry.npmjs.org/js-tokens/-/js-tokens-3.0.2.tgz
-Source5: http://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz
-Source6: http://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz
-Source7: http://registry.npmjs.org/promise/-/promise-7.3.1.tgz
-Source8: http://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.14.tgz
-Source9: http://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz
-Source10: http://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz
-Source11: http://registry.npmjs.org/node-fetch/-/node-fetch-1.7.1.tgz
-Source12: http://registry.npmjs.org/asap/-/asap-2.0.6.tgz
-Source13: http://registry.npmjs.org/encoding/-/encoding-0.1.12.tgz
-Source14: http://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz
-Source15: http://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.18.tgz
-Source16: react-15.3.2-registry.npmjs.org.tgz
+Source2: http://registry.npmjs.org/fbjs/-/fbjs-0.8.14.tgz
+Source3: http://registry.npmjs.org/js-tokens/-/js-tokens-3.0.2.tgz
+Source4: http://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz
+Source5: http://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz
+Source6: http://registry.npmjs.org/promise/-/promise-7.3.1.tgz
+Source7: http://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.14.tgz
+Source8: http://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz
+Source9: http://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz
+Source10: http://registry.npmjs.org/node-fetch/-/node-fetch-1.7.1.tgz
+Source11: http://registry.npmjs.org/asap/-/asap-2.0.6.tgz
+Source12: http://registry.npmjs.org/encoding/-/encoding-0.1.12.tgz
+Source13: http://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz
+Source14: http://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.18.tgz
+Source15: react-15.3.2-registry.npmjs.org.tgz
 BuildRequires: nodejs-packaging
+BuildRequires: npm(object-assign) = 4.1.1
 BuildArch:  noarch
 ExclusiveArch: %{nodejs_arches} noarch
 
 Provides: bundled-npm(react) = 15.3.2
 Provides: bundled-npm(loose-envify) = 1.3.1
-Provides: bundled-npm(object-assign) = 4.1.1
 Provides: bundled-npm(fbjs) = 0.8.14
 Provides: bundled-npm(js-tokens) = 3.0.2
 Provides: bundled-npm(isomorphic-fetch) = 2.2.1
@@ -58,9 +57,11 @@ for tgz in %{sources}; do
   echo $tgz | grep -q registry.npmjs.org || npm cache add --cache ./npm_cache $tgz
 done
 
-%setup -T -q -a 16 -D -n npm_cache
+%setup -T -q -a 15 -D -n npm_cache
 
 %build
+mkdir node_modules
+ln -s %{nodejs_sitelib}/object-assign node_modules/
 npm install --cache-min Infinity --cache . --no-optional --global-style true %{npm_name}@%{version}
 
 %install

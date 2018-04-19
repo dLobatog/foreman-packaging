@@ -13,7 +13,7 @@
 
 Summary:    Plugin that brings remote execution capabilities to Foreman
 Name:       %{?scl_prefix}rubygem-%{gem_name}
-Version:    1.5.0
+Version:    1.5.1
 Release:    1%{?foremandist}%{?dist}
 Group:      Applications/System
 License:    GPLv3
@@ -95,11 +95,15 @@ exit 0
 %{gem_instdir}/locale
 %{gem_instdir}/lib
 %{gem_instdir}/public
+%{gem_instdir}/webpack
+%{gem_instdir}/package.json
+%{gem_instdir}
 %{gem_spec}
 %{foreman_bundlerd_plugin}
 %{foreman_apipie_cache_foreman}
 %{foreman_apipie_cache_plugin}
 %{foreman_assets_plugin}
+%{foreman_webpack_plugin}
 %{gem_instdir}/Rakefile
 %doc %{gem_instdir}/LICENSE
 %exclude %{gem_cache}
@@ -110,6 +114,9 @@ exit 0
 %doc %{gem_instdir}/README.md
 
 %changelog
+* Thu Apr 19 2018 Daniel Lobato Garcia <me@daniellobato.me> 1.5.1-1
+- Update to 1.5.1
+
 * Thu Apr 05 2018 Ewoud Kohl van Wijngaarden <ewoud@kohlvanwijngaarden.nl> 1.5.0-1
 - Update to 1.5.0
 

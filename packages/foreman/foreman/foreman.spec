@@ -15,7 +15,7 @@
 
 Name:   foreman
 Version: 1.18.0
-Release: 0.develop%{?dotalphatag}%{?dist}
+Release: 1.develop%{?dotalphatag}%{?dist}
 Summary:Systems Management web application
 
 Group:  Applications/System

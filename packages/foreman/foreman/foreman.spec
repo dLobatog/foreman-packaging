@@ -925,13 +925,11 @@ cp config/settings.yaml.example config/settings.yaml
 sed -i 's/:locations_enabled: false/:locations_enabled: true/' config/settings.yaml
 sed -i 's/:organizations_enabled: false/:organizations_enabled: true/' config/settings.yaml
 export BUNDLER_EXT_GROUPS="default assets"
-ln -s %{nodejs_sitelib} node_modules
 export NODE_ENV=production
+ln -s %{nodejs_sitelib} node_modules
 %{?scl:scl enable %{scl} "}
-which webpack
 webpack --bail --config config/webpack.config.js
 %{?scl:"}
-which webpack
 %{scl_rake} assets:precompile RAILS_ENV=production --trace
 %{scl_rake} db:migrate db:schema:dump RAILS_ENV=production --trace
 %{scl_rake} apipie:cache RAILS_ENV=production cache_part=resources --trace
@@ -1092,6 +1090,7 @@ unlink tmp \\
 \\
 rm \`pwd\`/config/initializers/encryption_key.rb \\
 /usr/bin/%%{?scl:%%{scl}-}rake security:generate_encryption_key \\
+ln -s %{nodejs_sitelib} %%{buildroot}/node_modules \\
 export BUNDLER_EXT_NOSTRICT=1 \\
 %%{?-s:/usr/bin/%%{?scl:%%{scl}-}rake %%{-r*}%%{!?-r:plugin:assets:precompile[%%{-n*}%%{!?-n:%%{gem_name}}]} RAILS_ENV=production --trace} \\
 %%{?-a:/usr/bin/%%{?scl:%%{scl}-}rake db:create db:schema:load SCHEMA=%{_datadir}/%{name}/schema_plugin.rb RAILS_ENV=development --trace} \\
